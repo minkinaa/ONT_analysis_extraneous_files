@@ -19,25 +19,7 @@ aws s3 sync ${s3_input_folder}/${prefix}_sample_bams_by_isoform/ ${local_folder}
 aws s3 sync ${s3_input_folder}/${prefix}_isoform_plots_by_sample/ ${local_folder}/${prefix}_isoform_plots_by_sample/
 aws s3 sync ${s3_input_folder}/${prefix}_isoform_plots_by_experiment/ ${local_folder}/${prefix}_isoform_plots_by_experiment/
 aws s3 sync ${s3_input_folder}/${prefix}_TSS_plots_89836500_89837500/ ${local_folder}/${prefix}_TSS_plots_89836500_89837500/
-aws s3 sync ${s3_input_folder}/TSS_top_position_files_89836500_89837500/ ${local_folder}/${prefix}_TSS_top_position_files_89836500_89837500/
+aws s3 sync ${s3_input_folder}/${prefix}_TSS_top_position_files_89836500_89837500/ ${local_folder}/${prefix}_TSS_top_position_files_89836500_89837500/
 
 
 
-
-
-
-
-#${prefix}_final_read_names_and_barcodes_cutoff41.txt
-#${prefix}_read_counts_per_barcode_cutoff41.txt
-#${prefix}_reads_and_isoforms_w_bcs.txt
-#${prefix}_snca_slice_Flag0_or_16.bam
-#${prefix}_snca_slice_Flag0_or_16.bam.bai
-#${prefix}_snca_slice_buffer12_bed12_plus_isoform_calls_etc.txt
-#${prefix}_snca_slice_isoform_quant_interval_method.pdf
-#${prefix}_metadata.txt
-#${prefix}_isoform_counts_by_barcode_w_metadata.txt
-
-#Folder: ${prefix}_sample_bams/
-#Folder: ${prefix}_sample_bams_by_isoform/
-#Folder: ${prefix}_isoform_plots_by_sample/ 
-#Folder: ${prefix}_isoform_plots_by_experiment/
