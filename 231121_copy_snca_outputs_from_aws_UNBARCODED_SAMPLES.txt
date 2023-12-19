@@ -1,0 +1,18 @@
+#!/bin/bash
+
+prefix=$1
+s3_input_folder=$2
+local_folder=$3
+
+aws s3 cp ${s3_input_folder}/${prefix}_snca_slice_Flag0_or_16.bam ${local_folder}
+aws s3 cp ${s3_input_folder}/${prefix}_snca_slice_Flag0_or_16.bam.bai ${local_folder}
+aws s3 cp ${s3_input_folder}/${prefix}_snca_slice_buffer12_bed12_plus_isoform_calls_etc.txt ${local_folder}
+aws s3 cp ${s3_input_folder}/${prefix}_snca_slice_isoform_quant_interval_method.pdf ${local_folder}
+aws s3 cp ${s3_input_folder}/${prefix}_number_of_exons_by_isoform.pdf ${local_folder}
+aws s3 cp ${s3_input_folder}/${prefix}_snca_slice_buffer12_reads_and_isoform_calls.txt
+aws s3 cp ${s3_input_folder}/${prefix}_snca_slice_buffer12_interval_method_isoform_counts.txt
+
+
+aws s3 sync ${s3_input_folder}/${prefix}_sample_bams_by_isoform/ ${local_folder}/${prefix}_sample_bams_by_isoform/
+aws s3 sync ${s3_input_folder}/${prefix}_TSS_plots_89836500_89837500/ ${local_folder}/${prefix}_TSS_plots_89836500_89837500/
+aws s3 sync ${s3_input_folder}/${prefix}_TSS_top_position_files_89836500_89837500/ ${local_folder}/${prefix}_TSS_top_position_files_89836500_89837500/
